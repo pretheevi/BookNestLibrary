@@ -72,8 +72,8 @@ function RenderCurrentGenreBooks(currentGenreId) {
     const bookCard = createBookCard(book, index);
     contentArea.appendChild(bookCard);
   });
-
-  headerBarCard2Heading.textContent = currentGenre.charAt(0).toUpperCase() + currentGenre.slice(1);
+  console.log('RenderCurrentGenreBooks Called', currentGenreId, currentGenre);
+  headerBarCard2Heading.textContent = currentGenre;
 }
 
 
