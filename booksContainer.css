@@ -1,0 +1,84 @@
+:root {
+  --wood-brown: #7C4F28;
+  --wood-mid: #B38867;
+  --wood-cream: #F5E9DA;
+  --wood-walnut: #594231;
+  --wood-beige: #EAD1B4;
+  --accent-gold: #D4A373;
+  --accent-orange: #c06109;
+  --bright-orange: #df8338;
+  --darkBrown: #1d0e00;
+}
+
+a{
+  text-decoration: none;
+}
+
+.contentArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 518px;
+  margin: 0 auto;
+  overflow-y: auto;
+  border-bottom: 10px solid var(--accent-gold);
+}
+
+.contentArea::-webkit-scrollbar {
+  width: 6px;
+}
+.contentArea::-webkit-scrollbar-track {
+  background-color: var(--wood-cream);
+  border-radius: 10px;
+}
+.contentArea::-webkit-scrollbar-thumb {
+  background: var(--wood-brown);
+  border-radius: 10px;
+}
+.contentArea::-webkit-scrollbar-thumb:hover {
+  background: #d6a73f;
+}
+
+
+.booksContainer{
+  background-color: var(--wood-cream);
+  width: 145px;
+  height: 185px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 12px -6px rgba(76,45,18,0.10);
+  cursor: pointer;
+  padding: 15px;
+  margin: 0%;
+}
+
+.bookcover{
+  background-color: var(--wood-beige);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px 0px 0px;
+  overflow: hidden;
+  height: 110px;
+}
+.bookcover img{
+  width: 80px;
+  height: 100%;
+  border-radius: 10px;
+  transform: translateY(5px);
+}
+.bookName{
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--darkBrown);
+  margin: 10px 0px 5px 0px;
+  text-decoration: none;
+}
+.author{
+  font-size: 8px;
+  color: var(--accent-gold);
+  text-decoration: none;
+}

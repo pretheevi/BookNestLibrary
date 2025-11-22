@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>BookNest-Library</title>
+  <link rel="stylesheet" href="./bookDetails.css">
+</head>
+<body>
+  <div class="bg-container">
+    <div class="bookFrame">
+      <div class="bookBanner">
+        <div class="bookImage">
+          <div class="backNavCard">
+            <p><a href="./index.html">⬅️</a></p>
+            <h1>BookNest</h1>
+          </div>
+        </div>
+      </div>
+      <div class="contentCard">
+        <h1 id="title">The Silent Echo</h1>
+        <p id="author">Eleanor Carter</p>
+        <div class="ratingCard">
+          <ul class="ratingStarts">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+          </ul>
+          <p class="rateNo" id="rateNo">4.5/5</p>
+          <p class="genreName" id="GenreName">Historical Fiction</p>
+        </div>
+        <div class="themeCard">
+          <ul class="themeCardList" id="ThemeCardList">
+            <li>magic</li>
+            <li>adventure</li>
+            <li>friendship</li>
+            <li>coming-of-age</li>
+          </ul>
+        </div>
+        <div class="about">
+          <p class="label">About:</p>
+          <p class="text" id="About">
+            ✨ A young boy discovers he is a wizard and attends Hogwarts, 
+            unraveling the mystery of the Sorcerer's Stone.
+          </p>
+        </div>
+        <div class="info">
+          <p class="label">Info:</p>
+          <p class="text" id="Info">
+            ✨ A young boy discovers he is a wizard and attends Hogwarts, 
+            unraveling the mystery of the Sorcerer's Stone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="module">
+  import bookDatas from './data.js';
+
+  const params = new URLSearchParams(window.location.search);
+  const bookId = params.get("id");
+  console.log(bookDatas[(bookId-1)])
+
+
+  const title = document.getElementById('title');
+  const author = document.getElementById('author');
+  const rateNo = document.getElementById('rateNo');
+  const GenreName = document.getElementById('GenreName');
+  const ThemeCardList = document.getElementById('ThemeCardList');
+  const About = document.getElementById('About');
+  const Info = document.getElementById('Info');
+
+  function RenderBookData(){
+    title.textContent = '';
+    author.textContent = '';
+    rateNo.textContent = '';
+    GenreName.textContent = '';
+    ThemeCardList.textContent = '';
+    About.textContent = '';
+    Info.textContent = '';
+
+    const bookInfo = bookDatas[bookId-1];
+    title.textContent = bookInfo.title;
+    author.textContent = bookInfo.author;
+    rateNo.textContent = bookInfo.rating;
+    GenreName.textContent = bookInfo.genre;
+    About.textContent = bookInfo.about;
+    Info.textContent = bookInfo.info;
+
+    bookInfo.theme.forEach((val, idx) => {
+      const li = document.createElement('li')
+      li.id = idx;
+      li.textContent = val;
+      ThemeCardList.appendChild(li);
+    })
+  }
+
+  RenderBookData();
+</script>
+</html>

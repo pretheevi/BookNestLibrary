@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>BookNest-Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="booksContainer.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <div class="bg-container">
+    <div class="contentContainer">
+      <div class="sideBar">
+        <div class="sideBarHeader">
+          <p class="homeIcon"><i class="fa-solid fa-house"></i></p>
+          <h1 class="categories">Categories</h1>
+          <p id="categoriesToogleButton" class="breakBar"><i class="fa-solid fa-angle-right"></i></p>
+        </div>
+        <ul class="sideBarList">
+          <li><i class="fa-solid fa-list"></i></li>
+          <li><i class="fa-regular fa-user"></i></li>
+          <li><i class="fa-solid fa-earth-africa"></i></li>
+          <li><i class="fa-regular fa-bookmark"></i></li>
+        </ul>
+      </div>
+      <div class="mainContent">
+        <header class="headerBar">
+          <div class="headerBar-card1">
+            <h1 class="headerBar-card1-heading">Welcome to BookNest Library</h1>
+            <ul class="headerBar-card1-icons">
+              <li><i class="fa-regular fa-user"></i></li>
+              <li><i class="fa-solid fa-earth-africa"></i></li>
+              <li><i class="fa-regular fa-bookmark"></i></li>
+            </ul>
+          </div>
+          <div class="headerBar-card2">
+            <h1 id="headerBarCard2Heading" class="headerBar-card2-heading">Featured Books</h1>
+            <button class="header-card2-favorites">Favorites</button>
+          </div>
+        </header>
+        <div id="CateGoriesList" class="categoriesList">
+          <i id="categoriesListCardXicon" class="fa-solid fa-xmark"></i>
+          <ul class="categoriesItems">
+            <li><p>Fiction</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>Non-Fiction</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>Mystery</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>Science Fiction</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>History</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>Children's Books</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>Fantasy</p><i class="fa-solid fa-angle-right"></i></li>
+            <li><p>Romance</p><i class="fa-solid fa-angle-right"></i></li>
+          </ul>
+        </div>
+        <main class="contentArea">
+            <!-- <div class="booksContainer">
+              <div class="bookcover">
+                  <img src="./bookcovers/fiction/harry-potter.jpg">
+              </div>
+              <div class="bookDetails">
+                  <h2 class="bookName">Harry Potter and the Sorcerer's Stone</h2>
+                  <p class="author">asdada</p>
+              </div>
+            </div> -->
+        </main>
+        <footer class="recommentationCard">
+          <h1>Recommended Reads</h1>
+          <div id="RecommentationBooks" class="recommentationBooks">
+              <!-- <div class="recommentationBooksList">
+                  <img src="./bookcovers/fantasy/harry-potter-and-the-sorcerers-stone.jpg">
+                  <div class="recommentationBooksListName">
+                    <p>harry potter and the sorcerers stone</p>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </div>
+              </div> -->
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
