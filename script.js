@@ -1,4 +1,4 @@
-import bookDatas from './dataV1.js';
+import bookDatas from './data.js';
 const headerBarCard2Heading = document.getElementById('headerBarCard2Heading');
 const categoriesListCard = document.getElementById('CateGoriesList');
 const categoriesListCardXicon = document.getElementById('categoriesListCardXicon');
