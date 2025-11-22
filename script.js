@@ -17,7 +17,7 @@ categoriesListCardXicon.addEventListener('click', () => {
 //   }
 // })
 
-let currentGenreId = localStorage.getItem('currentGenreId') ? localStorage.getItem('currentGenreId') : 0;
+let currentGenreId = Number(localStorage.getItem('currentGenreId')) || 0;
 
 function createBookCard(book) {
   // console.log(book.id)
@@ -59,7 +59,7 @@ function createBookCard(book) {
 
 const genreName = ['fiction', 'nonFiction', 'mystery', 'scienceFiction', 'history', 'childrensBooks', 'fantasy', 'romance'];
 function RenderCurrentGenreBooks(currentGenreId) {
-  currentGenreId = localStorage.getItem('currentGenreId')
+  currentGenreId = Number(localStorage.getItem('currentGenreId')) || 0;
   headerBarCard2Heading.innerHTML = '';
   contentArea.innerHTML = '';
 
