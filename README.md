@@ -52,10 +52,3 @@ Feel free to open issues or pull requests. When submitting changes, include a br
 **License**
 This repository does not include a license file. Add a license (for example, MIT) if you want others to reuse this code freely.
 
----
-If you'd like, I can:
-- apply small fixes (update `script.js` link targets and recommendation id handling),
-- normalize image paths in `data.js`, and
-- add `alt` text and lazy-loading for images.
-
-Tell me which of those you'd like me to apply next.
