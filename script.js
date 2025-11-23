@@ -51,7 +51,7 @@ function createBookCard(book) {
   booksContainer.appendChild(bookcoverDiv);
   booksContainer.appendChild(bookDetailsDiv);
   
-  a.href = `./bookDetails?id=${book.id}`;
+  a.href = `./bookDetails.html?id=${book.id}`;
   a.appendChild(booksContainer);
   return a;
 }
